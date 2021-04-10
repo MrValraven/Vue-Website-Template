@@ -14,6 +14,7 @@
         <li><router-link class="navLinks" :to="{ name: 'Home' }">Eventos</router-link></li>
         <li><router-link class="navLinks" :to="{ name: 'Home' }">Associação</router-link></li>
         <li><router-link class="navLinks" :to="{ name: 'Home' }">Serviços</router-link></li>
+        <li><Dropdown title="Dropdown" :items="services" /></li>
         <li><router-link class="navLinks" :to="{ name: 'Home' }">Contactos</router-link></li>
       </ul>
 	  </nav>
@@ -24,8 +25,30 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
+import Dropdown from '@/components/Dropdown.vue';
 export default defineComponent({
   name: 'Navbar',
+  data() {
+    return {
+      services: [
+        {
+          title: 'Web',
+          link: '#'
+        },
+        {
+          title: 'Design',
+          link:'#'
+        },
+        {
+          title: 'Videos',
+          link: '#'
+        }
+      ]
+    }
+  },
+  components: { 
+    Dropdown,
+  }
 });
 </script>
 
