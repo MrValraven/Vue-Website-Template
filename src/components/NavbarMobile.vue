@@ -10,6 +10,7 @@
         :class="isActive"
         >
             <li v-for="(navlink, index) in navLinks" :key="navlink.id" :data-index="index"><router-link :to="{ name: navlink.routeName }"> {{ navlink.routeText }}</router-link></li>
+            <DropdownMobile title="Services" :items="services" />
         </transition-group>
 
         <div class="burger" @click="toggleClass()">
@@ -27,6 +28,7 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 import gsap from 'gsap';
+import DropdownMobile from './DropdownMobile.vue';
 export default defineComponent({          
     setup() {
         const navLinks = [
@@ -68,6 +70,9 @@ export default defineComponent({
             this.toggle ? this.isActive = "isActive" : this.isActive = "";
         },
     },
+    components: {
+        DropdownMobile,
+    }
 });
 </script>
 

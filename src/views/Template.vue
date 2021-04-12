@@ -3,9 +3,10 @@
     <NavbarMobile v-if="(mobileMode && isAtTop) || (activatedNavbar && mobileMode)" @click="activatedNavbar = !activatedNavbar" />
     <Navbar v-if="!mobileMode" class="navbar" />
     <div v-if="!activatedNavbar" class="pageContent">
-
+      <section></section>
+      <Footer />
     </div>
-    <Footer />
+    
 </template>
 
 <script lang="ts">
@@ -64,7 +65,10 @@ export default defineComponent({
 <style lang="scss" scoped>
 
 .pageContent {
-  height: 100vh;
+
+  section {
+    height: 100vh;
+  }
   
 }
 

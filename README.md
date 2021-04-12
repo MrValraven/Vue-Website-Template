@@ -1,19 +1,5 @@
-# vue-website-template
+# Vue Website Template
 
-## Project setup
-```
-npm install
-```
+A simple Vue3 website template with Typescript, vue-router and Sass.
+It has template components, a fleshed out router system and a template page.
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
